@@ -5,6 +5,7 @@ var running = true;
 var hours = 0;
 var minutes = 0;
 var seconds = 0;
+var milliseconds = 0;
 
 StartTimer();
 
@@ -18,6 +19,7 @@ function DrawTime() {
     document.getElementById("hour").innerText = `${hours}h`;
     document.getElementById("minute").innerText = `${minutes}m`;
     document.getElementById("second").innerText = `${seconds}s`;
+    document.getElementById("millisecond").innerText = `${milliseconds}s`;
 }
 
 function ToggleFullscreen() {
@@ -56,13 +58,14 @@ function ToggleTimer() {
 
 function StartTimer() {
     timer = setInterval(function () {
-        seconds++;
+        milliseconds++;
+        if (milliseconds == 1000) { milliseconds = 0; seconds++; }
         if (seconds == 60) { seconds = 0; minutes++; }
         if (minutes == 60) { minutes = 0; hours++; }
 
         DrawTime();
 
-    }, 1000);
+    }, 1);
     document.getElementById("start-btn").innerText = "stop";
 }
 
@@ -73,6 +76,6 @@ function StopTimer() {
 
 function ClearTimer() {
     StopTimer();
-    hours = 0, minutes = 0, seconds = 0;
+    hours = 0, minutes = 0, seconds = 0, milliseconds = 0;
     DrawTime();
 }
