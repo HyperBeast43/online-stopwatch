@@ -17,11 +17,11 @@ document.onkeydown = (e) => {
 }
 
 function DrawTime() {
-    document.getElementById("day").innerText = `${days}h`;
+    document.getElementById("day").innerText = `${days}d`;
     document.getElementById("hour").innerText = `${hours}h`;
     document.getElementById("minute").innerText = `${minutes}m`;
     document.getElementById("second").innerText = `${seconds}s`;
-    document.getElementById("millisecond").innerText = `${milliseconds}s`;
+    document.getElementById("millisecond").innerText = `${milliseconds}ms`;
 }
 
 function ToggleFullscreen() {
