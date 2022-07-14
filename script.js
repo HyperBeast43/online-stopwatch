@@ -6,7 +6,7 @@ var hours = 0;
 var minutes = 0;
 var seconds = 0;
 
-StartTimer()
+StartTimer();
 
 document.onkeydown = (e) => {
     if (e.key === "s" || e.keyCode == 32) { ToggleTimer(); }
