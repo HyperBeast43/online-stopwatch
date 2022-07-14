@@ -60,7 +60,7 @@ function ToggleTimer() {
 
 function StartTimer() {
     timer = setInterval(function () {
-        milliseconds++;
+        milliseconds += 50 ;
         if (milliseconds == 1000) { milliseconds = 0; seconds++; }
         if (seconds == 60) { seconds = 0; minutes++; }
         if (minutes == 60) { minutes = 0; hours++; }
@@ -68,7 +68,7 @@ function StartTimer() {
 
         DrawTime();
 
-    }, 1);
+    }, 50);
     document.getElementById("start-btn").innerText = "stop";
 }
 
