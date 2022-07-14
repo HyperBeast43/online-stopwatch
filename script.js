@@ -1,6 +1,6 @@
 var fullscreen = false;
 var timer;
-var running = false;
+var running = true;
 
 var hours = 0;
 var minutes = 0;
