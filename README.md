@@ -6,4 +6,4 @@ To start hit the button or use the `spacebar` or `s` key. To stop hit the button
 
 Icons supplied by Material Design: https://material.io/tools/icons/
 
-yeah this didn't work i have no idea how to set up a githup pages thing
+(note from hyper: yeah this didn't work i have no idea how to set up a github pages thing)
