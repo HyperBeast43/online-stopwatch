@@ -7,6 +7,9 @@ var hours = 0;
 var minutes = 0;
 var seconds = 0;
 
+
+//
+
 document.onkeydown = (e) => {
     if (e.key === "s" || e.keyCode == 32) { ToggleTimer(); }
     else if (e.key === "r") { ClearTimer(); }
@@ -55,8 +58,9 @@ function ToggleTimer() {
 }
 
 function StartTimer() {
+    pre = Date.now()
     timer = setInterval(function () {
-        seconds += .1 ;
+        seconds += (diff/1000) ;
         if (seconds >= 60) { seconds = 0; minutes++; }
         if (minutes == 60) { minutes = 0; hours++; }
         if (hours == 24) { hours = 0; days++; }
@@ -64,6 +68,7 @@ function StartTimer() {
         DrawTime();
 
     }, 100);
+    diff = pre - Date.now
     document.getElementById("start-btn").innerText = "stop";
 }
 
