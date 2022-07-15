@@ -62,9 +62,9 @@ const StartTimer = async () => {
     diff = Date.now() - pre ;
     }, 100);
     if (running == true) { seconds += (diff/1000) ; }
-    if (seconds >= 60) { seconds = 0; minutes++; }
-    if (minutes == 60) { minutes = 0; hours++; }
-    if (hours == 24) { hours = 0; days++; }
+    if (seconds >= 60) { seconds -= 60; minutes++; }
+    if (minutes >= 60) { minutes -= 60; hours++; }
+    if (hours >= 24) { hours -= 24; days++; }
     DrawTime();
     document.getElementById("start-btn").innerText = "stop";
 }
