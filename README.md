@@ -6,4 +6,4 @@ To start hit the button or use the `spacebar` or `s` key. To stop hit the button
 
 Icons supplied by Material Design: https://material.io/tools/icons/
 
-note from hyper: yeah i may or may not have done some things. this was originally just going to be automatically starting but here we are
+note from hyper: i tried to add milliseconds, i really did. it kept waiting forever. i give up.
