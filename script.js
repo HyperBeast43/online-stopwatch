@@ -8,13 +8,7 @@ var minutes = 0;
 var seconds = 0;
 var diff = 100;
 
-// https://www.sitepoint.com/delay-sleep-pause-wait/
-function sleep(ms) {
-  return new promise(
-    promise.resolve => setTimeout(resolve, ms)
-  );
-}
-//
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 document.onkeydown = (e) => {
     if (e.key === "s" || e.keyCode == 32) { ToggleTimer(); }
@@ -66,7 +60,7 @@ function ToggleTimer() {
 
 async function StartTimer() {
     pre = Date.now() ;
-    await sleep(100);
+    await delay(100);
     diff = Date.now() - pre ;
     if (running == true) { seconds += (diff/1000) ; }
     if (seconds >= 60) { seconds = 0; minutes++; }
