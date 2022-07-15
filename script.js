@@ -58,7 +58,7 @@ function ToggleTimer() {
 
 async function StartTimer() {
     pre = Date.now() ;
-    setTimeout(function() {
+    setTimeout(() => {
     diff = Date.now() - pre ;
     }, 100);
     if (running == true) { seconds += (diff/1000) ; }
