@@ -68,7 +68,7 @@ function StartTimer() {
         DrawTime();
 
     }, 100);
-    diff = pre - Date.now
+    diff = pre - Date.now()
     document.getElementById("start-btn").innerText = "stop";
 }
 
