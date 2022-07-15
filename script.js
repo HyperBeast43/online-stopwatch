@@ -56,7 +56,7 @@ function ToggleTimer() {
     running = !running;
 }
 
-const StartTimer = async () => {
+async function StartTimer() {
     pre = Date.now() ;
     setTimeout(function() {
     diff = Date.now() - pre ;
