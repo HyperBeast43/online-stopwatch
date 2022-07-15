@@ -57,7 +57,7 @@ function ToggleTimer() {
 function StartTimer() {
     timer = setInterval(function () {
         seconds += .1 ;
-        if (seconds == 60) { seconds = 0; minutes++; }
+        if (seconds >= 60) { seconds = 0; minutes++; }
         if (minutes == 60) { minutes = 0; hours++; }
         if (hours == 24) { hours = 0; days++; }
 
