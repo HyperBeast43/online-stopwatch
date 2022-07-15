@@ -25,7 +25,7 @@ function DrawTime() {
     document.getElementById("hour").innerText = `${hours}h`;
     document.getElementById("minute").innerText = `${minutes}m`;
     document.getElementById("second").innerText = `${seconds.toFixed(1)}s`;
-    document.getElementById("debug").innerText = `${diff}`;
+    document.getElementById("debug").innerText = `${diff}, ${running}, ${Date.now()}`;
 }
 
 function ToggleFullscreen() {
