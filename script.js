@@ -10,7 +10,9 @@ var diff = 100;
 
 // https://www.sitepoint.com/delay-sleep-pause-wait/
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new promise(
+    promise.resolve => setTimeout(resolve, ms)
+  );
 }
 //
 
@@ -25,7 +27,7 @@ function DrawTime() {
     document.getElementById("hour").innerText = `${hours}h`;
     document.getElementById("minute").innerText = `${minutes}m`;
     document.getElementById("second").innerText = `${seconds.toFixed(1)}s`;
-    document.getElementById("debug").innerText = `${diff}, ${running}, ${(Date.now()).toString()}`;
+    document.getElementById("debug").innerText = `${diff}, ${running.toString()}`;
 }
 
 function ToggleFullscreen() {
