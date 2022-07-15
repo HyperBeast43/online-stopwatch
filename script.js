@@ -18,7 +18,8 @@ function DrawTime() {
     document.getElementById("day").innerText = `${days}d`;
     document.getElementById("hour").innerText = `${hours}h`;
     document.getElementById("minute").innerText = `${minutes}m`;
-    document.getElementById("second").innerText = `${seconds.toFixed(1)}s`;
+    document.getElementById("second").innerText = `${seconds}s`;
+//    document.getElementById("second").innerText = `${seconds.toFixed(1)}s`;
     document.getElementById("debug").innerText = `${Math.random().toFixed(5)}, ${diff}, ${running.toString()}, ${seconds}`;
 }
 
