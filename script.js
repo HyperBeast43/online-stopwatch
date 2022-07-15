@@ -66,7 +66,7 @@ function ToggleTimer() {
     running = !running;
 }
 
-function StartTimer() {
+async function StartTimer() {
     pre = Date.now() ;
     sleep(100) ;
     diff = Date.now() - pre ;
