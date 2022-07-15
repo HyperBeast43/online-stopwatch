@@ -29,6 +29,7 @@ function DrawTime() {
     document.getElementById("hour").innerText = `${hours}h`;
     document.getElementById("minute").innerText = `${minutes}m`;
     document.getElementById("second").innerText = `${seconds.toFixed(1)}s`;
+    document.getElementById("debug").innerText = `${diff}`;
 }
 
 function ToggleFullscreen() {
@@ -78,7 +79,7 @@ function StartTimer() {
 }
 
 function StopTimer() {
-    running = true;
+    running = false;
     document.getElementById("start-btn").innerText = "start";
 }
 
