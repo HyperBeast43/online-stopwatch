@@ -6,7 +6,7 @@ var days = 0;
 var hours = 0;
 var minutes = 0;
 var seconds = 0;
-var diff = 100;
+//var diff = 100;
 
 document.onkeydown = (e) => {
     if (e.key === "s" || e.keyCode == 32) { ToggleTimer(); }
@@ -57,19 +57,23 @@ function ToggleTimer() {
 }
 
 async function StartTimer() {
-    pre = Date.now() ;
-    setTimeout(() => {
-    diff = Date.now() - pre ;
-    }, 100);
-    if (running == true) { seconds += (diff/1000) ; }
-    if (seconds >= 60) { seconds -= 60; minutes++; }
-    if (minutes >= 60) { minutes -= 60; hours++; }
-    if (hours >= 24) { hours -= 24; days++; }
-    DrawTime();
+    //pre = Date.now() ;
+    //setInterval(() => {
+    //diff = Date.now() - pre ;
+    //}, 100);
+    //if (running == true) { seconds += (diff/1000) ; }
+    timer = setInterval(function () {
+        if (running == true) { seconds += 1 ; }
+        if (seconds >= 60) { seconds -= 60; minutes++; }
+        if (minutes >= 60) { minutes -= 60; hours++; }
+        if (hours >= 24) { hours -= 24; days++; }
+        DrawTime();
+    }, 1000);
     document.getElementById("start-btn").innerText = "stop";
 }
 
 function StopTimer() {
+    clearInterval(timer);
     running = false;
     document.getElementById("start-btn").innerText = "start";
 }
