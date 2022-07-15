@@ -8,6 +8,14 @@ var minutes = 0;
 var seconds = 0;
 var diff = 100;
 
+// https://www.sitepoint.com/delay-sleep-pause-wait/
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 //
 
 document.onkeydown = (e) => {
@@ -58,22 +66,19 @@ function ToggleTimer() {
 }
 
 function StartTimer() {
-    pre = Date.now()
-    timer = setInterval(function () {
-        seconds += (diff/1000) ;
-        if (seconds >= 60) { seconds = 0; minutes++; }
-        if (minutes == 60) { minutes = 0; hours++; }
-        if (hours == 24) { hours = 0; days++; }
-
-        DrawTime();
-
-    }, 100);
-    diff = pre - Date.now()
+    pre = Date.now() ;
+    sleep(100) ;
+    diff = Date.now() - pre ;
+    if (running == true) { seconds += (diff/1000) ; }
+    if (seconds >= 60) { seconds = 0; minutes++; }
+    if (minutes == 60) { minutes = 0; hours++; }
+    if (hours == 24) { hours = 0; days++; }
+    DrawTime();
     document.getElementById("start-btn").innerText = "stop";
 }
 
 function StopTimer() {
-    clearInterval(timer);
+    running = true;
     document.getElementById("start-btn").innerText = "start";
 }
 
