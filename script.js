@@ -61,9 +61,8 @@ function ToggleTimer() {
 const StartTimer = async () => {
     pre = Date.now() ;
     setTimeout(function() {
-    // do nothing
-    }, 100);
     diff = Date.now() - pre ;
+    }, 100);
     if (running == true) { seconds += (diff/1000) ; }
     if (seconds >= 60) { seconds = 0; minutes++; }
     if (minutes == 60) { minutes = 0; hours++; }
