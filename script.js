@@ -9,12 +9,8 @@ var seconds = 0;
 var diff = 100;
 
 // https://www.sitepoint.com/delay-sleep-pause-wait/
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 //
 
@@ -68,7 +64,7 @@ function ToggleTimer() {
 
 async function StartTimer() {
     pre = Date.now() ;
-    sleep(100) ;
+    await sleep(100);
     diff = Date.now() - pre ;
     if (running == true) { seconds += (diff/1000) ; }
     if (seconds >= 60) { seconds = 0; minutes++; }
