@@ -17,9 +17,20 @@
 </head>
 
 <body onload="StartTimer();" align="right">
-    <div id="hour">0h</div>
-    <div id="minute">0m</div>
-    <div id="second">0s</div>
+    <div class="container">
+        <div class="body">
+            <div id="hour">0h</div>
+            <div id="minute">0m</div>
+            <div id="second">0s</div>
+        </div>
+        <div class="controls">
+            <button onclick="ToggleTimer()" id="start-btn"> Start </button>
+            <button onclick="ClearTimer()" id="reset-btn"> Reset </button>
+        </div>
+    </div>
+    <button class="fullscreen-button" onclick="ToggleFullscreen()" title="Toggles Fullscreen">
+        <i class="material-icons" id="fullscreen-icon">fullscreen</i>
+    </button>
 </body>
 
 </html>
