@@ -35,6 +35,12 @@ body, button {
     text-align: center;
 }
 
+.bodystr {
+    font-weight: bold;
+    font-size: 108px;
+    text-align: right;
+}
+
 .container {
     width: 80%;
     margin: auto;
