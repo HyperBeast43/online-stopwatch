@@ -53,3 +53,7 @@ body, button {
 .body>div {
     display: inline;
 }
+
+.bodystr>div {
+    display: inline;
+}
