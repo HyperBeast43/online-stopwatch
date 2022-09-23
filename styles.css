@@ -38,7 +38,7 @@ body, bodystr, button {
 .bodystr {
     font-weight: bold;
     font-size: 108px;
-    text-align: right;
+    text-align: left;
     display: inline;
 }
 
